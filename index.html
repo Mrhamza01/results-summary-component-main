@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Frontend Mentor | Results summary component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: "375px",
+            md: "768px",
+            lg: "976px",
+            xl: "1400px",
+          },
+          colors: {
+            // Primary
+
+            LightRed: "hsl(0, 100%, 67%)",
+            OrangeyYellow: "hsl(39, 100%, 56%)",
+            GreenTeal: "hsl(166, 100%, 37%)",
+            CobaltBlue: "hsl(234, 85%, 45%)",
+            LightRedAlfa: "hsla(0, 100%, 67%,0.1)",
+            OrangeyYellowAlfa: "hsl(39, 100%, 56%,0.1)",
+            GreenTealAlfa: "hsla(166, 100%, 37%,0.04)",
+            CobaltBlueAlfa: "hsla(234, 85%, 45% ,0.04)",
+
+            // Gradients
+
+            lightSlateBlue: "hsl(252, 100%, 67%)",
+            lightRoyalBlue: "hsl(241, 81%, 54%)",
+            violetBlue: "hsla(256, 72%, 46%, 1)",
+            persianBlue: "hsla(241, 72%, 46%, 10)",
+
+            // Neutral
+
+            white: "hsl(0, 0%, 100%)",
+            paleBlue: "hsl(221, 100%, 96%)",
+            lightLavender: "hsl(241, 100%, 89%)",
+            darkGrayBlue: "hsl(224, 30%, 27%)",
+          },
+          fontFamily: {
+            HankenGrotesk: ["Hanken Grotesk"],
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-HankenGrotesk">
+    <div class="flex h-screen items-center justify-center">
+      <div
+        class="w-[250px] h-[370px] bg-gradient-to-b from-lightSlateBlue via-lightRoyalBlue via-violetBlue to-persianBlue rounded-xl"
+      >
+        <div class="font-black text-center mt-5 text-lightLavender">
+          Your Result
+        </div>
+        <div
+          class="h-[120px] w-[120px] mx-auto rounded-full mt-5 bg-gradient-to-b from-persianBlue via-violetBlue via-lightRoyalBlue to-lightSlateBlue"
+        >
+          <h1 class="text-white text-center font-bold text-5xl pt-8">76</h1>
+          <p class="text-center text-xs text-lightLavender">of 100</p>
+        </div>
+        <div>
+          <h1 class="text-white text-center font-bold text-3xl pt-8">Great</h1>
+          <p class="text-center text-sm text-lightLavender pt-4">
+            The Scored higher than 65% of <br />
+            the people who have taken <br />
+            these tests
+          </p>
+        </div>
+      </div>
+
+      <div class="w-[250px] h-[37s0px] rounded-xl">
+        <div>
+          <h1 class="m-5 ml-7 font-extrabold text-xl text-darkGrayBlue">
+            Summary
+          </h1>
+        </div>
+        <div class="flex flex-col gap-y-3">
+          <div>
+            <div
+              class="h-[45px] w-[215px] a bg-LightRedAlfa mx-auto rounded-xl flex justify-between"
+            >
+              <div class="flex gap-2 my-auto">
+                <img
+                  class="h-[25px] w-[20px] ml-3"
+                  src="./assets/images/icon-reaction.svg"
+                />
+                <span class="font-bold text-LightRed">Reaction</span>
+              </div>
+
+              <div class="my-auto mr-3 font-bold">
+                <span class="text-darkGrayBlue">80</span>
+                <span class="text-lightLavender">/ 100</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div
+              class="h-[45px] w-[215px] a bg-OrangeyYellowAlfa mx-auto rounded-xl flex justify-between"
+            >
+              <div class="flex gap-2 my-auto">
+                <img
+                  class="h-[25px] w-[20px] ml-3"
+                  src="./assets/images/icon-memory.svg"
+                />
+                <span class="font-bold text-OrangeyYellow">Memory</span>
+              </div>
+
+              <div class="my-auto mr-3 font-bold">
+                <span class="text-darkGrayBlue">92</span>
+                <span class="text-lightLavender">/ 100</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-[45px] w-[215px] a bg-GreenTealAlfa mx-auto rounded-xl flex justify-between"
+            >
+              <div class="flex gap-2 my-auto">
+                <img
+                  class="h-[25px] w-[20px] ml-3"
+                  src="./assets/images/icon-verbal.svg"
+                />
+                <span class="font-bold text-GreenTeal">Verbal</span>
+              </div>
+
+              <div class="my-auto mr-3 font-bold">
+                <span class="text-darkGrayBlue">61</span>
+                <span class="text-lightLavender">/ 100</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-[45px] w-[215px] a bg-CobaltBlueAlfa mx-auto rounded-xl flex justify-between"
+            >
+              <div class="flex gap-2 my-auto">
+                <img
+                  class="h-[25px] w-[20px] ml-3"
+                  src="./assets/images/icon-visual.svg"
+                />
+                <span class="font-bold text-CobaltBlue">Visual</span>
+              </div>
+
+              <div class="my-auto mr-3 font-bold">
+                <span class="text-darkGrayBlue">72</span>
+                <span class="text-lightLavender">/ 100</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="h-[45px] w-[215px] a bg-darkGrayBlue mx-auto rounded-full flex justify-between mt-4 hover:bg-gradient-to-b from-lightSlateBlue via-lightRoyalBlue via-violetBlue to-persianBlue cursor-pointer"
+        >
+          <span class="mx-auto my-auto font-bold text-large text-white"
+            >Continue</span
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
